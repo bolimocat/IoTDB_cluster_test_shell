@@ -1,0 +1,10 @@
+#!/bin/bash
+nodeList="192.168.130.31:192.168.130.32:192.168.130.33:192.168.130.34:192.168.130.35"
+nodePort=55560
+serverPath="server"
+cliPath="cli"
+wareHouse="31:32:33:34:35"
+testCase="testcase"
+user="lming"
+clusterLength="5"
+home=`pwd`
