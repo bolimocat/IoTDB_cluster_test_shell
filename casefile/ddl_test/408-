@@ -1,0 +1,8 @@
+create timeseries root.ln.dev.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1)
+ALTER timeseries root.ln.dv.ch RENAME tag1 TO newTag1
+ALTER timeseries root.ln.dv.ch SET tag1=newV1, attr1=newV1
+ALTER timeseries root.ln.dv.ch DROP tag1, tag2
+ALTER timeseries root.ln.dv.ch ADD TAGS tag3=v3, tag4=v4
+ALTER timeseries root.ln.dv.ch ADD ATTRIBUTES attr3=v3, attr4=v4
+ALTER timeseries root.ln.dv.ch UPSERT TAGS(tag3=v3, tag4=v4) ATTRIBUTES(attr3=v3, attr4=v4)
+ALTER timeseries root.ln.dv.ch UPSERT TAGS(tag3=v3, tag4=v4) ATTRIBUTES(attr3=v3, attr4=v4)

@@ -1,0 +1,55 @@
+ --------------    Test DDL  [   set storage group to root.ln1   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.33, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln1   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln2   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.35, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln2   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.33, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln3   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.33, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln3   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.31, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln3   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.34, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln3   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+IoTDB> can't execute sql becauseConnection Error, please check whether the network is available or the server has started.
+IoTDB> Connection Error, please check whether the network is available or the server has started. Host is @192.168.130.32, port is 55560.
+ --------------    Test DDL  [   set storage group to root.ln3   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+ --------------    Test DDL  [   set storage group to root.ln3   ]  Start  ----------------------
+Msg: The statement is executed successfully.
+ --------------    Test DDL  [   set storage group to root.ln3   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln4   ]  Start  ----------------------
+Msg: The statement is executed successfully.
+ --------------    Test DDL  [   set storage group to root.ln4   ]   End   ----------------------
+ 
+ 

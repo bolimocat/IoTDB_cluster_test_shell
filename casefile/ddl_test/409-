@@ -1,0 +1,37 @@
+create timeseries root.ln.dev.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1)
+ALTER timeseries root.ln.dv.ch RENAME tag2 TO newTag1
+ALTER timeseries root.ln.dv.ch RENAME tag1 TO tag1
+ALTER timeseries root.ln.dv.cha RENAME tag1 TO newTag1
+ALTER timeseries root.ln.dv.ch RENAME tag1 TO ''
+ALTER timeseries root.ln.dv.ch RENAME tag1 TO null
+ALTER timeseries root.ln.dv.ch RENAME tag1 TO newTag1,newTag2
+upset timeseries root.ln.dv.ch RENAME tag1 TO newTag1
+ALTER timeserie root.ln.dv.ch RENAME tag1 TO newTag1
+ALTER timeseries root.ln.dv.ch RENAME1 tag1 TO newTag1
+ALTER timeseries root.ln.dv.ch SET tag1=newV1
+ALTER timeseries root.ln.dv.ch SET attr1=newV1
+ALTER timeseries root.ln.dv.ch SET tag1=newV1 attr1=newV1
+ALTER timeseries root.ln.dv.ch SET tag1=, attr1=
+ALTER timeseries root.ln.dv.ch SET tag1=null, attr1=null
+ALTER timeseries root.ln.dv.ch SET taga=newV1, attra5=newV1
+update timeseries root.ln.dv.ch SET tag1=newV1, attr1=newV1
+ALTER timeseries root.ln.dv.ch SET1 tag1=newV1, attr1=newV1
+ALTER timeseries root.ln.dv.ch ADD TAGS tag3=tag1
+ALTER timeseries root.ln.dv.ch ADD TAGS tag3=v3
+ALTER timeseries root.ln.dv.ch ADD TAGS tag3=v3, tag4=v4
+ALTER timeseries root.ln.dv.ch ADD TAGS tag3=null
+ALTER timeseries root.ln.dv.ch ADD TAGS v1=v1
+ALTER timeseries root.ln.dv.ch ADD TAGS tag3=v3 tag4=v4
+ALTER timeseries root.ln.dv.ch ADD TAG tag3=v3, tag4=v4
+ALTER timeseries root.ln.dv.ch ADD1 TAGS tag3=v3, tag4=v4
+update timeseries root.ln.dv.ch ADD TAGS tag3=v3, tag4=v4
+ALTER timeseries root.ln.dv.ch ADD ATTRIBUTES attr3=attr1
+ALTER timeseries root.ln.dv.ch ADD ATTRIBUTES attr3=null
+ALTER timeseries root.ln.dv.ch ADD ATTRIBUTES v1=v1
+ALTER timeseries root.ln.dv.ch ADD ATTRIBUTES attr3=null
+ALTER timeseries root.ln.dv.ch ADD1 ATTRIBUTES1 attr3=v3, attr4=v4
+ALTER timeseries root.ln.dv.ch DROP tag1
+ALTER timeseries root.ln.dv.ch DROP tag1, tag2
+ALTER timeseries root.ln.dv.ch DROP tag3
+update timeseries root.ln.dv.ch DROP tag1, tag2
+ALTER timeseries root.ln.dv.ch DROP1 tag1, tag2

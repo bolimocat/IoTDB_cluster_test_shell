@@ -1,0 +1,6 @@
+delete ttl to root.ln
+unset ttl1 to root.ln
+unset ttlt on root.ln
+unset ttl to root.ln.dev
+unset ttl to root.ln1,root.ln2
+unset ttl to root

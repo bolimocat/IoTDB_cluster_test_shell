@@ -1,0 +1,11 @@
+create ttl to root.ln 3600000
+set ttl1 to root.ln 3600000
+set ttl on root.ln 3600000
+set ttl to root.ln.dev 3600000
+set ttl to root.ln.dev.ch 3600000
+set ttl to root.ln -3600000
+set ttl to root.ln ·ÇÊý×Ö
+set ttl to root.ln '3600000'
+set ttl to root.ln 360+1000
+set ttl to root.ln 360000000000000
+set ttl to root.ln 0

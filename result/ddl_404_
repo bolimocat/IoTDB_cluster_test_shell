@@ -1,0 +1,15 @@
+ --------------    Test DDL  [   set storage group to root.ln4   ]  Start  ----------------------
+Msg: 300: org.apache.iotdb.db.exception.metadata.StorageGroupAlreadySetException:root.ln4 has already been set to storage group
+ --------------    Test DDL  [   set storage group to root.ln4   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln4   ]  Start  ----------------------
+Msg: The statement is executed successfully.
+ --------------    Test DDL  [   set storage group to root.ln4   ]   End   ----------------------
+ 
+ 
+ --------------    Test DDL  [   set storage group to root.ln5   ]  Start  ----------------------
+Msg: The statement is executed successfully.
+ --------------    Test DDL  [   set storage group to root.ln5   ]   End   ----------------------
+ 
+ 
