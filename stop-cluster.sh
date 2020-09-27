@@ -10,17 +10,21 @@ array_node=(`echo $nodeList|cut -d \: -f 1` `echo $nodeList|cut -d \: -f 2` `ech
 		echo " stop  $user@${array_node[i]}"		
 	done
 # cp logs from every node
-timestamp=`cat $home/timestamp`
+#timestamp=`cat $home/timestamp`
 	for((i=0;i<$clusterLength;i++));
 	do
-		ssh $user@${array_node[i]} 'cp -rf /home/'$user'/'$serverPath'/logs  /home/'$user'/'$nodeResult'/'$timestamp''
-		sleep 2
+		ssh $user@${array_node[i]} 'mkdir -p /home/'$user'/'$nodeResult'/'$1'/'
+		ssh $user@${array_node[i]} 'cp -rf /home/'$user'/'$serverPath'/logs  /home/'$user'/'$nodeResult'/'$1'/logs'
+		ssh $user@${array_node[i]} 'rm -rf /home/'$user'/'$serverPath'/logs/* '
+		sleep 1
 		echo " save logs  $user@${array_node[i]}"		
 	done
 
 # delete data file
 	for((i=0;i<$clusterLength;i++));
 	do
+		#ssh $user@${array_node[i]} 'mkdir -p /home/'$user'/'$nodeResult'/'$1'/data '
+		ssh $user@${array_node[i]} 'cp -rf /home/'$user'/'$serverPath'/data    /home/'$user'/'$nodeResult'/'$1'/data '
 		ssh $user@${array_node[i]} 'rm -rf /home/'$user'/'$serverPath'/data   '
 		sleep 1
 		echo " delete data  $user@${array_node[i]}"		

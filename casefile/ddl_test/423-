@@ -1,4 +1,4 @@
-create ttl to root.ln 3600000
+create timeseries root.ln.dev2.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1);create ttl to root.ln 3600000
 set ttl1 to root.ln 3600000
 set ttl on root.ln 3600000
 set ttl to root.ln.dev 3600000

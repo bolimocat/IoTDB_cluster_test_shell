@@ -1,1 +1,1 @@
-SHOW TIMESERIES LIMIT -1 OFFSET 0
+create timeseries root.ln.dev2.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1);SHOW TIMESERIES LIMIT -1 OFFSET 0

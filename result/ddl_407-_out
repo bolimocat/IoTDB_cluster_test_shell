@@ -1,0 +1,5 @@
+ --------------    Test DDL  [   create timeseries root.ln.dev.ch(ch) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1)   ]  Start  ----------------------
+Msg: The statement is executed successfully.
+ --------------    Test DDL  [   create timeseries root.ln.dev.ch(ch) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1)   ]   End   ----------------------
+ 
+ 

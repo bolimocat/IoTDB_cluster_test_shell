@@ -1,1 +1,39 @@
-test
+使用说明：
+1 本脚本共有以下几个文件：
+	cluster_parameter.sh 加载所有需要的环境变量
+	distribute_properties.sh 分别给所有节点分发配置文件（之前用的是复制，之后考虑追加变更内容到文件尾。）
+	test-cluster.sh 	启动测试
+	start-cluster.sh	启动预定好的所有节点
+	task	执行测试的任务调度文本
+	stop-cluster.sh	停止集群的所有节点。
+	test.sh	用来调试一些执行语句，可忽略。
+2 另外有以下目录
+	casefile：
+		包含子目录conf_test包含配置文件相关的用例，dml_test包含dml操作用例，ddl_test包含ddl操作用例。
+	result：
+		保存每一个用例执行完成的结果，文件名为”用例名_out“
+	35,32,31:
+		节点配置文件的目录名，对应cluster_parameter.sh中的wareHouse字段
+	cluster_result：
+		也是在cluster_parameter.sh中配置，存储cluster系统的日志和data文件。
+3 执行基本流程
+	a.保证所有节点上的环境配置完成，包括jdk和maven。
+	b.每个节点上cluster系统的部署位置保持一致，在cluster_parameter.sh中填写对应的server目录和cli目录。
+	c.因为有远程操作，所以需要每个节点之间做交换key，处理，在配置了cluster_parameter.sh的host和cluster_result后，在运行exchange_key.sh。
+	d.保持当前系统中cluster没有运行，执行test-cluster.sh，开始执行测试：
+		每个用例的执行都相对独立，都会进行：启动集群 - 执行测试 - 记录结果 - 停止集群 - 保存所有节点日志，保存所有节点data 的过程。
+		启动和停止集群不需要人工干预。
+	e.查看测试结果：
+		在result目录中，有对应每一个测试用例的执行结果，其中包含该用例执行的语句和最终执行信息。
+		在cluster_result中，以用例名做目录名，里面是每次测试时，集群的日志和data，cluster_result目录会在所有节点创建，各自记录自己的内容。
+4 编写，调整用例的办法
+	测试执行时首先遍历task文件，该文件中列出了所有要执行测试的内容，每行的格式为“测试类型:用例文件名”，其中测试类型包含：conf，ddl，dml，分别表示配置文件测试，ddl测试和dml测试
+	其中conf的执行方法需要后续补充。
+	用例文件名，对应在casefile的对应目录里，例如，casefile/ddl/404 - result/404_out 用例和结果一一对应。
+	用例文件就是具体的执行语句，有一些已经写好的，个别在执行时需要调整。
+5 执行细节
+	在执行测试时，ddl从原则上说，只在任意一个节点上执行即可，所以语句上使用了“array_node[$[$RANDOM%3]]”随机选择一个节点执行，另外“3”表示当时是一个3节点集群，应	小于等于实际集群的节点数。
+	执行dml测试时，每个节点上都可以执行，且可以重复执行，因此执行时顺序让每个节点都执行一次。
+6 其他
+	其他使用时有任何问题，可灵活修改。
+	

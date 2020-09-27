@@ -1,4 +1,4 @@
-delete ttl to root.ln
+set storage group to root.ln;set ttl to root.ln 3600000;delete ttl to root.ln
 unset ttl1 to root.ln
 unset ttlt on root.ln
 unset ttl to root.ln.dev

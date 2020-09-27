@@ -1,1 +1,1 @@
-COUNT TIMESERIES root GROUP BY LEVEL=a
+create timeseries root.ln.dev2.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1);COUNT TIMESERIES root GROUP BY LEVEL=a

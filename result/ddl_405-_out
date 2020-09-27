@@ -1,0 +1,5 @@
+ --------------    Test DDL  [   set storag group to root.ln   ]  Start  ----------------------
+Msg: 401: line 1:4 no viable alternative at input 'set storag'
+ --------------    Test DDL  [   set storag group to root.ln   ]   End   ----------------------
+ 
+ 

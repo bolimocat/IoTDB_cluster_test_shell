@@ -1,1 +1,1 @@
-COUNT NODE root.ln.wf01 LEVEL=3
+create timeseries root.ln.dev2.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1);COUNT NODE root.ln.dev LEVEL=3

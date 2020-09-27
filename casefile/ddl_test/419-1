@@ -1,1 +1,1 @@
-delete timeseries root.ln.wf01.wt01.status11111
+create timeseries root.ln.dev2.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1);delete timeseries root.ln.wf01.wt01.status11111

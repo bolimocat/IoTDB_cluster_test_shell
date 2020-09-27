@@ -1,1 +1,1 @@
-SHOW CHILD PATHS 存储组名.*.次级设备
+create timeseries root.ln.dev2.ch(status) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(tag1=v1) attributes(attr1=v1);SHOW CHILD PATHS 存储组名.*.次级设备

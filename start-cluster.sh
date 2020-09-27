@@ -27,17 +27,17 @@ echo "$user"
 echo `date +%Y%m%d%H%M%S` >$home/timestamp
 timestamp=`cat $home/timestamp`
 # create result on every_node 
-	for((i=0;i<$clusterLength;i++));
-	do
-		ssh $user@${array_node[i]} 'mkdir -p /home/'$user'/'$nodeResult'/'$timestamp' '
+	#for((i=0;i<$clusterLength;i++));
+	#do
+		#ssh $user@${array_node[i]} 'mkdir -p /home/'$user'/'$nodeResult'/'$timestamp' '
 		sleep 1
-		if	test $? -eq 0
-		then echo "${array_node[i]} node create result is correct !"
-		else
-		echo "${array_node[i]} node create result is fail !"
-		exit 1
-		fi
-	done
+		#if	test $? -eq 0
+		#then echo "${array_node[i]} node create result is correct !"
+		#else
+		#echo "${array_node[i]} node create result is fail !"
+		#exit 1
+		#fi
+	#done
 # create result on every_node end
 	
 

@@ -1,1 +1,1 @@
-set ttl to root.ln 3600000
+set storage group to root.ln;set ttl to root.ln 3600000
